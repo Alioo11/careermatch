@@ -29,7 +29,7 @@ class JobinjaCrawler implements ICrawler {
   };
 
   crawl = async () => {
-    const browser = await createBrowser({headless:false})
+    const browser = await createBrowser()
     const page = await browser.newPage();
     this.page = page;
 

@@ -8,7 +8,7 @@ class Scrapper {
 
   getBrowser = async () => {
     if (this.browser) return this.browser;
-    const browser = await createBrowser({headless:false});
+    const browser = await createBrowser();
     return browser;
   };
 
