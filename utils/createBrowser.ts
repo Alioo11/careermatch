@@ -2,8 +2,8 @@ import puppeteer, { type LaunchOptions } from "puppeteer";
 import env from "../constants/env";
 
 
-const linuxChromiumExecutablePath = "/usr/bin/chromium-browser";
 const macOSChromiumExecutablePath = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
+const linuxChromiumExecutablePath = "/usr/bin/chromium-browser";
 
 const executablePath = env.isProd
   ? linuxChromiumExecutablePath
@@ -13,7 +13,8 @@ const args = env.isProd ? ["--no-sandbox", "--disable-setuid-sandbox"] : [];
 
 const defaultPuppeteerOptions: LaunchOptions = {
   executablePath: executablePath,
-  headless: true,
+  protocolTimeout:60000,
+  headless: 'shell',
   args: args,
 };
 
