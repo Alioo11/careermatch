@@ -27,6 +27,7 @@
     "prettier": "^3.5.1"
   },
   "dependencies": {
+    "@prisma/client": "^6.4.1",
     "@types/axios": "^0.14.4",
     "@types/express": "^5.0.0",
     "axios": "^1.7.9",
