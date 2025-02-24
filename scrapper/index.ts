@@ -29,7 +29,7 @@ class Scrapper {
       const browser = await this.getBrowser();
       const page = await browser.newPage();
       await page.goto(url);
-      await page.waitForNetworkIdle();
+      // await page.waitForNetworkIdle();
       await page.evaluate(() => {
         const elements = document.querySelectorAll("script, style, iframe, nav, footer");
         elements.forEach((element) => element.remove());
